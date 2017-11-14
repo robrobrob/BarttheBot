@@ -39,7 +39,6 @@ public class Magpie2
 		{
 			response = "You don't say.";
 		}
-
 		return response;
 	}
 	
