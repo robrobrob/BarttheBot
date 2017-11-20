@@ -25,19 +25,19 @@ public class Magpie2
 
 		if (whichResponse == 0)
 		{
-			response = "Interesting, tell me more.";
+			response = "Hello, my name is Bart. ";
 		}
 		else if (whichResponse == 1)
 		{
-			response = "Hmmm.";
+			response = "Nope, I don't want to talk.";
 		}
 		else if (whichResponse == 2)
 		{
-			response = "Do you really think so?";
+			response = "What do you want? I'm tired.";
 		}
 		else if (whichResponse == 3)
 		{
-			response = "You don't say.";
+			response = "How's it hangin' I'm Chat the ChatBart. ";
 		}
 		return response;
 	}
