@@ -25,7 +25,7 @@ public class Magpie2
 
 		if (whichResponse == 0)
 		{
-			response = "Hello, my name is Bart.";
+			response = "Hello, my name is Bart. ";
 		}
 		else if (whichResponse == 1)
 		{
