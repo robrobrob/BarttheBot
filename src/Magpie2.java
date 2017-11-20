@@ -33,11 +33,11 @@ public class Magpie2
 		}
 		else if (whichResponse == 2)
 		{
-			response = "What do you want? I'm tired";
+			response = "What do you want? I'm tired.";
 		}
 		else if (whichResponse == 3)
 		{
-			response = "How's it hangin' I'm Chat the ChatBart";
+			response = "How's it hangin' I'm Chat the ChatBart.";
 		}
 		return response;
 	}
