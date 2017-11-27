@@ -10,6 +10,23 @@
  * @author Laurie White
  * @version April 2012
  */
+
+ /*
+ * Edits by: Robert Hill-Guarino and Evan Schimberg
+ *
+ * Class: AP Computer Science
+ *
+ * Assignment: Problem Set 8 - Magpie Chatbot Lab
+ *
+ * Date: 11/27/2017
+ *
+ * Purpose: We made several edits to the provided magpie code in order to
+ * improve the code. More keywords and responses were added to make the bot
+ * more involved.
+ *
+ */
+
+
 public class Magpie2
 {
 	/**
