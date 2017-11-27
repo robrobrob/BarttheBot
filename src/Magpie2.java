@@ -82,9 +82,9 @@ public class Magpie2
 		} else if(statement.indexOf("cat")>=0||statement.indexOf("dog")>=0){
 			response = "Tell me more about your pets.";
 		} else if(statement.indexOf("Mr.")>=0){
-			response = "I think sounds like a good teacher";
+			response = "I think he sounds like a good teacher.";
 		} else if(statement.indexOf("Mrs.")>=0||statement.indexOf("Ms.")>=0){
-			response = "She looks like a good teacher";
+			response = "She sounds like she is a good teacher.";
 		} else if(statement.indexOf("hate")>=0){
 			response = "I hate that too.";
 		} else if(statement.indexOf("happy")>=0){
@@ -129,7 +129,7 @@ public class Magpie2
 			response = "Yeah.";
 		}
 		else if (whichResponse == 5){
-			response = "Byeah";
+			response = "Byeah.";
 		}
 
 		return response;
