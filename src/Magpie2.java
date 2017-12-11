@@ -58,6 +58,7 @@ public class Magpie2
 		{
 			response = "How's it hangin' I'm Bart the ChatBart. ";
 		}
+
 		return response;
 	}
 	
