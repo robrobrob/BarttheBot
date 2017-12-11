@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * A program to carry on conversations with a human user.
  * This is the initial version that:  
@@ -16,13 +18,13 @@
  *
  * Class: AP Computer Science
  *
- * Assignment: Problem Set 8 - Magpie Chatbot Lab
+ * Assignment: Problem Set 9a - Magpie Activity 5
  *
- * Date: 11/27/2017
+ * Date: 12/21/2017
  *
  * Purpose: We made several edits to the provided magpie code in order to
  * improve the code. More keywords and responses were added to make the bot
- * more involved.
+ * more involved in its chatting.
  *
  */
 
@@ -104,32 +106,42 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 6;
+		ArrayList<String> randomResponses = new ArrayList<String>();
+		final int NUMBER_OF_RESPONSES = randomResponses.size();
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
-		
+		randomResponses.add("Interesting, tell me more.");
+		randomResponses.add("Hmmm.");
+		randomResponses.add("Do you really think so?");
+		randomResponses.add("You don't say.");
+		randomResponses.add("Yeah.");
+		randomResponses.add("Byeah.");
+		randomResponses.add("Wazzap!");
+		randomResponses.add("It is what it is.");
+		randomResponses.add("The end of times has come. There is no hope for you.");
+
 		if (whichResponse == 0)
 		{
-			response = "Interesting, tell me more.";
+			response = ;
 		}
 		else if (whichResponse == 1)
 		{
-			response = "Hmmm.";
+			response = ;
 		}
 		else if (whichResponse == 2)
 		{
-			response = "Do you really think so?";
+			response = ;
 		}
 		else if (whichResponse == 3)
 		{
-			response = "You don't say.";
+			response = ;
 		}
 		else if (whichResponse == 4){
-			response = "Yeah.";
+			response = ;
 		}
 		else if (whichResponse == 5){
-			response = "Byeah.";
+			response = ;
 		}
 
 		return response;
