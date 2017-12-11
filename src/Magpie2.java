@@ -21,7 +21,7 @@ import java.util.Random;
  *
  * Assignment: Problem Set 9a - Magpie Activity 5
  *
- * Date: 12/21/2017
+ * Date: 12/11/2017
  *
  * Purpose: We made several edits to the provided magpie code in order to
  * improve the code. More keywords and responses were added to make the bot
