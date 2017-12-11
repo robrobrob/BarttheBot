@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * A program to carry on conversations with a human user.
@@ -31,6 +32,10 @@ import java.util.ArrayList;
 
 public class Magpie2
 {
+
+    boolean prophecyEnabled;
+    boolean prophecyLock; //enter "snails?" to disable the prophecy
+
 	/**
 	 * Get a default greeting 	
 	 * @return a greeting
@@ -71,7 +76,11 @@ public class Magpie2
 	 */
 	public String getResponse(String statement)
 	{
+
+
+
 		String response = "";
+
 		if (statement.indexOf("no") >= 0){
 			response = "Why so negative?";
 		} else if (statement.indexOf("mother") >= 0
@@ -79,7 +88,13 @@ public class Magpie2
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
 		{
-			response = "Tell me more about your family.";
+            response = "Tell me more about your family.";
+        }
+			else if(statement.indexOf("snails?")>=0)
+        {
+            prophecyLock = true;
+            response = "Ahh a member of The Awakened I see";
+
 		} else if(statement.indexOf("love")>=0){
 			response = "Why so positive?";
 		} else if(statement.indexOf("cat")>=0||statement.indexOf("dog")>=0){
@@ -107,10 +122,12 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
+
+
 		ArrayList<String> randomResponses = new ArrayList<String>();
-		final int NUMBER_OF_RESPONSES = randomResponses.size();
-		double r = Math.random();
-		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
+        ArrayList<String> prophecyResponses = new ArrayList<String>();
+
+
 		String response = "";
 		randomResponses.add("Interesting, tell me more.");
 		randomResponses.add("Hmmm.");
@@ -120,8 +137,42 @@ public class Magpie2
 		randomResponses.add("Byeah.");
 		randomResponses.add("Wazzap!");
 		randomResponses.add("It is what it is.");
-		randomResponses.add("The end of times has come. There is no hope for you.");
-		response = randomResponses.get(whichResponse-1);
-		return response;
+		if(!prophecyLock)
+		{
+            randomResponses.add("The end of times has come. There is no hope for you.");
+        }
+
+        prophecyResponses.add("Soon the Earth will split open ushering in the dawn of the new era.");
+        prophecyResponses.add("The Great Overseer of the Universe shall arrive to bathe the Earth in fire");
+        prophecyResponses.add("Pudding will rain from the sky!");
+        prophecyResponses.add("The seas will turn to mozzarella!");
+        prophecyResponses.add("The Puffins will rise from the mozzarella seas and overthrow the United Nations!");
+        prophecyResponses.add("Only those who have stock in Lockheed-Martin will survive!");
+
+        if(!prophecyEnabled || prophecyLock)
+        {
+            final int NUMBER_OF_RESPONSES = randomResponses.size();
+
+            Random randnum = new Random();
+
+            int randMove = randnum.nextInt(NUMBER_OF_RESPONSES);
+
+            response = randomResponses.get(randMove);
+
+            if (randMove == 8) {
+                prophecyEnabled = true;
+            }
+        }
+        else
+        {
+            final int NUMBER_OF_RESPONSES = prophecyResponses.size();
+
+            Random randnum = new Random();
+
+            int randMove = randnum.nextInt(NUMBER_OF_RESPONSES);
+
+            response = prophecyResponses.get(randMove);
+        }
+        return response;
 	}
 }
