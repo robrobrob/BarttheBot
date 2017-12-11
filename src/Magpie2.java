@@ -120,30 +120,6 @@ public class Magpie2
 		randomResponses.add("Wazzap!");
 		randomResponses.add("It is what it is.");
 		randomResponses.add("The end of times has come. There is no hope for you.");
-
-		if (whichResponse == 0)
-		{
-			response = ;
-		}
-		else if (whichResponse == 1)
-		{
-			response = ;
-		}
-		else if (whichResponse == 2)
-		{
-			response = ;
-		}
-		else if (whichResponse == 3)
-		{
-			response = ;
-		}
-		else if (whichResponse == 4){
-			response = ;
-		}
-		else if (whichResponse == 5){
-			response = ;
-		}
-
 		return response;
 	}
 }
