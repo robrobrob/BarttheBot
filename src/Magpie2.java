@@ -56,7 +56,7 @@ public class Magpie2
 		}
 		else if (whichResponse == 3)
 		{
-			response = "How's it hangin' I'm Chat the ChatBart. ";
+			response = "How's it hangin' I'm Bart the ChatBart. ";
 		}
 		return response;
 	}
@@ -120,6 +120,7 @@ public class Magpie2
 		randomResponses.add("Wazzap!");
 		randomResponses.add("It is what it is.");
 		randomResponses.add("The end of times has come. There is no hope for you.");
+		response = randomResponses.get(whichResponse-1);
 		return response;
 	}
 }
